@@ -25197,11 +25197,14 @@ function a8() {
                     className:
                       "mt-5 font-display text-5xl font-black leading-tight tracking-[-0.045em] text-[#061b36] md:text-6xl",
                     children: [
-                      "先回答問題，",
-                      S.jsx("br", {
-                        "data-loc": "client/src/pages/Home.tsx:346",
+                      S.jsx("span", {
+                        className: "whitespace-nowrap",
+                        children: "先回答問題，",
                       }),
-                      "才談軍武級。",
+                      S.jsx("span", {
+                        className: "whitespace-nowrap",
+                        children: "才談軍武級。",
+                      }),
                     ],
                   }),
                   S.jsx("p", {
@@ -25867,11 +25870,14 @@ function a8() {
                     className:
                       "mt-5 font-display text-5xl font-black leading-tight tracking-[-0.045em] text-[#061b36] md:text-6xl",
                     children: [
-                      "附件不是裝飾，",
-                      S.jsx("br", {
-                        "data-loc": "client/src/pages/Home.tsx:554",
+                      S.jsx("span", {
+                        className: "whitespace-nowrap",
+                        children: "附件不是裝飾，",
                       }),
-                      "是證據牆。",
+                      S.jsx("span", {
+                        className: "whitespace-nowrap",
+                        children: "是證據牆。",
+                      }),
                     ],
                   }),
                   S.jsx("p", {
