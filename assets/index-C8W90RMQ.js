@@ -25835,7 +25835,7 @@ function a8() {
                   "data-loc": "client/src/pages/Home.tsx:542",
                   className: "text-sm font-semibold leading-7 text-[#526d88]",
                   children:
-                    "附件文字提及北京國際俱樂部飯店與北京金茂威斯汀酒店；更合理的理解，是把它視為總統出訪指定場域防護案例，而不是外界無法驗證的白宮內部設備宣稱。",
+                    "北京國際俱樂部飯店與北京金茂威斯汀酒店，是總統出訪指定場域使用 RGF 的防護案例。",
                 }),
               ],
             }),
