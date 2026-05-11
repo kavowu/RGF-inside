@@ -24551,28 +24551,28 @@ const ZM = {
   FM = { layout: { ProjectionNode: Nb, MeasureLayout: bb } },
   JM = { ...z3, ...ZM, ...VM, ...FM },
   os = J4(JM, c3),
-  tA =
+  g8 =
     typeof window < "u" &&
     window.location.hostname.endsWith("github.io") &&
     window.location.pathname.split("/").filter(Boolean).length > 0
       ? `/${window.location.pathname.split("/").filter(Boolean)[0]}`
       : "",
-  eA = (n) => `${tA}/assets/${n}`,
+  b8 = (n) => `${g8}/assets/${n}`,
   Me = {
     hero: "https://d2xsxph8kpxj0f.cloudfront.net/93925518/8e6bLCgVJsDtVouB5QqHN2/rgf-hero-military-cleanroom-4CxAqCgcdgrXYAXpu8cfxc.webp",
     virus:
       "https://d2xsxph8kpxj0f.cloudfront.net/93925518/8e6bLCgVJsDtVouB5QqHN2/rgf-virus-neutralization-QUKwmZUc2nwtUfRUp5agMP.webp",
     evidence:
       "https://d2xsxph8kpxj0f.cloudfront.net/93925518/8e6bLCgVJsDtVouB5QqHN2/rgf-evidence-wall-SHKK9ujhLAyAufePdAwrSM.webp",
-    poster: eA("視覺圖.webp"),
-    nbaf: eA("生物防護脈絡.jpg"),
+    poster: b8("視覺圖.webp"),
+    nbaf: b8("生物防護脈絡.jpg"),
     pathogenBrochure:
-      eA("多病原測試文宣.webp"),
-    timeline: eA("大事紀原始附件圖.webp"),
-    anthrax: eA("環境淨化器郵包炭疽故事附件.jpg"),
-    tripleCertifications: eA("通過台美中三地防疫技術認證佐證圖.webp"),
+      b8("多病原測試文宣.webp"),
+    timeline: b8("大事紀原始附件圖.webp"),
+    anthrax: b8("環境淨化器郵包炭疽故事附件.jpg"),
+    tripleCertifications: b8("通過台美中三地防疫技術認證佐證圖.webp"),
     presidentialTrip:
-      eA("指定場域防護.jpg"),
+      b8("指定場域防護.jpg"),
   },
   WM = [
     {
@@ -24777,7 +24777,7 @@ function a8() {
               href: "#top",
               "aria-label": "回到首頁",
               children: S.jsx("img", {
-                src: eA("RGF-inside.png"),
+                src: b8("RGF-inside.png"),
                 alt: "RGF-inside Logo",
                 className: "h-12 w-auto object-contain",
               }),
@@ -26224,22 +26224,32 @@ function a8() {
     ],
   });
 }
+const y8 =
+  typeof window < "u" && window.location.hostname.endsWith("github.io")
+    ? (() => {
+        const n = window.location.pathname.split("/").filter(Boolean)[0];
+        return n ? `/${n}` : "";
+      })()
+    : "";
 function i8() {
-  return S.jsxs(pA, {
-    "data-loc": "client/src/App.tsx:12",
-    children: [
-      S.jsx(mf, {
-        "data-loc": "client/src/App.tsx:13",
-        path: "/",
-        component: a8,
-      }),
-      S.jsx(mf, {
-        "data-loc": "client/src/App.tsx:14",
-        path: "/404",
-        component: D0,
-      }),
-      S.jsx(mf, { "data-loc": "client/src/App.tsx:16", component: D0 }),
-    ],
+  return S.jsx(hA, {
+    base: y8,
+    children: S.jsxs(pA, {
+      "data-loc": "client/src/App.tsx:12",
+      children: [
+        S.jsx(mf, {
+          "data-loc": "client/src/App.tsx:13",
+          path: "/",
+          component: a8,
+        }),
+        S.jsx(mf, {
+          "data-loc": "client/src/App.tsx:14",
+          path: "/404",
+          component: D0,
+        }),
+        S.jsx(mf, { "data-loc": "client/src/App.tsx:16", component: D0 }),
+      ],
+    }),
   });
 }
 function s8() {
