@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kavowu.github.io/RGF-inside/sitemap.xml
