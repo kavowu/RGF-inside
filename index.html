@@ -19911,5 +19911,68 @@ Error generating stack: ` +
     </script>
 
     <div id="root"></div>
+    <script>
+      (function() {
+        const checkExist = setInterval(() => {
+          const main = document.querySelector('main');
+          if (main) {
+            clearInterval(checkExist);
+            if (!document.getElementById('custom-footer')) {
+              const footerHtml = `
+<footer id="custom-footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <!-- Phone Card -->
+      <a href="tel:03-668-5878" class="footer-card">
+        <div class="footer-icon-wrap">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="footer-label">客服專線</p>
+          <p class="footer-value">03-668-5878</p>
+        </div>
+      </a>
+      
+      <!-- Email Card -->
+      <a href="mailto:kavowu@wetoptec.com.tw" class="footer-card">
+        <div class="footer-icon-wrap">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="footer-label">電子郵件</p>
+          <p class="footer-value">kavowu@wetoptec.com.tw</p>
+        </div>
+      </a>
+      
+      <!-- Web Card -->
+      <a href="https://www.wetoptec.com.tw" target="_blank" rel="noopener noreferrer" class="footer-card">
+        <div class="footer-icon-wrap">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="footer-label">官方網站</p>
+          <p class="footer-value">www.wetoptec.com.tw</p>
+        </div>
+      </a>
+    </div>
+    
+    <div class="footer-copyright">
+      &copy; 2026 RGF-inside 環境淨化技術. All rights reserved.
+    </div>
+  </div>
+</footer>
+              `;
+              main.insertAdjacentHTML('beforeend', footerHtml);
+            }
+          }
+        }, 100);
+      })();
+    </script>
   </body>
 </html>
