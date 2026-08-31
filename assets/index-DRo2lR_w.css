@@ -6046,3 +6046,13 @@ h3 {
   color: rgba(255, 255, 255, 0.4);
   font-weight: 600;
 }
+
+/* Reduce navigation logo size and header vertical padding */
+header img[alt="RGF-inside Logo"] {
+  height: 2.25rem !important; /* 36px, down from 48px (h-12) */
+}
+
+header > div {
+  padding-top: 0.75rem !important; /* Tighter vertical padding */
+  padding-bottom: 0.75rem !important;
+}
