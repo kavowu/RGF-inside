@@ -24569,7 +24569,7 @@ const ZM = {
     pathogenBrochure:
       b8("多病原測試文宣.webp"),
     timeline: b8("RGF-環境淨化技術大事紀_0.jpg"),
-    anthrax: b8("美國 NBAF 生物防禦.png"),
+    anthrax: b8("環境淨化器郵包炭疽故事附件.jpg"),
     tripleCertifications: b8("通過台美中三地防疫技術認證佐證圖.webp"),
     presidentialTrip:
       b8("指定場域防護.jpg"),
