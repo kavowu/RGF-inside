@@ -19970,6 +19970,50 @@ Error generating stack: ` +
               `;
               main.insertAdjacentHTML('beforeend', footerHtml);
             }
+            
+            // Init Lightbox zoom feature
+            if (!document.getElementById('lightbox-overlay')) {
+              const overlay = document.createElement('div');
+              overlay.id = 'lightbox-overlay';
+              overlay.innerHTML = `
+                <div id="lightbox-close">&times;</div>
+                <img src="" alt="Enlarged view">
+              `;
+              document.body.appendChild(overlay);
+              
+              const lightboxImg = overlay.querySelector('img');
+              const closeBtn = overlay.querySelector('#lightbox-close');
+              
+              const closeLightbox = () => {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+              };
+              
+              overlay.addEventListener('click', closeLightbox);
+              closeBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                closeLightbox();
+              });
+              lightboxImg.addEventListener('click', (e) => {
+                e.stopPropagation();
+                closeLightbox();
+              });
+              
+              document.body.addEventListener('click', (e) => {
+                const img = e.target.closest('main img');
+                if (img && img.src && !img.closest('header') && !img.closest('#custom-footer')) {
+                  lightboxImg.src = img.src;
+                  overlay.classList.add('active');
+                  document.body.style.overflow = 'hidden';
+                }
+              });
+              
+              window.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && overlay.classList.contains('active')) {
+                  closeLightbox();
+                }
+              });
+            }
           }
         }, 100);
       })();

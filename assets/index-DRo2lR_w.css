@@ -6056,3 +6056,75 @@ header > div {
   padding-top: 0.75rem !important; /* Tighter vertical padding */
   padding-bottom: 0.75rem !important;
 }
+
+/* Lightbox zoom-in cursor for clickable images */
+main img {
+  cursor: zoom-in;
+  transition: opacity 0.25s ease;
+}
+main img:hover {
+  opacity: 0.92;
+}
+
+/* Lightbox overlay styling */
+#lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(6, 27, 54, 0.95); /* Deep dark theme color */
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#lightbox-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#lightbox-overlay img {
+  max-width: 92%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: zoom-out;
+}
+
+#lightbox-overlay.active img {
+  transform: scale(1);
+}
+
+/* Lightbox close button */
+#lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+#lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #38bdf8;
+  transform: scale(1.05);
+}
